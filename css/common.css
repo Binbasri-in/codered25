@@ -29,73 +29,76 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation Styles */
 .cyber-nav {
+    /* Set the bottom border color */
     border-bottom-color: var(--cyber-primary);
+  
+    /* Set the background color with a semi-transparent black */
     background: rgba(26, 26, 26, 0.95);
+  
+    /* Add some padding and position the nav bar fixed at the top */
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+  
+    /* Add a blur effect to the background */
     backdrop-filter: blur(10px);
-}
-.cyber-nav::before {
+  }
+  
+  /* Add a gradient overlay to the navigation bar */
+  .cyber-nav::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, 
-        rgba(251, 0, 0, 0.1) 0%, 
-        rgba(0, 0, 0, 0) 20%, 
-        rgba(0, 0, 0, 0) 80%, 
-        rgba(251, 0, 0, 0.1) 100%
-    );
+    background: linear-gradient(90deg, rgba(251, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(251, 0, 0, 0.1) 100%);
     pointer-events: none;
-}
-
-
-.cyber-nav .container {
+  }
+  
+  .cyber-nav .container {
     max-width: 1400px;
     padding: 0 4rem;
     display: flex;
     align-items: center;
-}
-
-.navbar-brand {
+  }
+  
+  .navbar-brand {
     display: flex;
     align-items: center;
     gap: 2rem;
-}
-
-.nav-logo {
+  }
+  
+  .nav-logo {
     height: 80px;
     width: auto;
     transition: all 0.3s ease;
-}
-
-.cyber-brand {
+  }
+  
+  /* Style the logo text with a glowing red/orange effect on hover */
+  .cyber-brand {
     font-family: 'sd-dystopian', sans-serif;
     font-size: 2.6rem;
     color: var(--cyber-primary) !important;
     text-shadow: 0 0 10px rgba(251, 0, 0, 0.5);
     transition: all 0.3s ease;
-}
-
-.cyber-brand:hover {
+  }
+  
+  .cyber-brand:hover {
     text-shadow: 0 0 20px rgba(251, 0, 0, 0.8);
     transform: scale(1.05);
-}
-
-
-.navbar-nav {
+  }
+  
+  .navbar-nav {
     margin-left: auto;
     gap: 2.5rem;
-}
-
-.nav-link {
+  }
+  
+  /* Style the navigation links with a hover effect */
+  .nav-link {
     color: var(--cyber-white) !important;
     font-size: 1.1rem;
     position: relative;
@@ -103,9 +106,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 0.5rem 1rem;
-}
-
-.nav-link::after {
+  }
+  
+  /* Add an underline effect that grows on hover */
+  .nav-link::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -114,111 +118,114 @@ body {
     height: 2px;
     background: var(--cyber-gradient);
     transition: width 0.3s ease;
-}
-
-.nav-link:hover {
+  }
+  
+  /* Change the link color and add a slight upward transform on hover */
+  .nav-link:hover {
     color: var(--cyber-red) !important;
     transform: translateY(-2px);
-}
-
-.nav-link:hover::after {
+  }
+  
+  .nav-link:hover::after {
     width: 100%;
-}
-
-.cyber-register {
+  }
+  
+  /* Style the "Register" button with a red border and background */
+  .cyber-register {
     border: 1px solid var(--cyber-red);
     border-radius: 4px;
     padding: 0.5rem 1.5rem !important;
     background: rgba(251, 0, 0, 0.1);
-}
-
-.cyber-register:hover {
+  }
+  
+  .cyber-register:hover {
     background: rgba(251, 0, 0, 0.2);
     box-shadow: 0 0 15px rgba(251, 0, 0, 0.3);
-}
-
-.cyber-nav.scrolled {
+  }
+  
+  /*  a scrolled state to the navigation bar  for box shadow */
+  .cyber-nav.scrolled {
     padding: 0.8rem 0;
     background: rgba(0, 0, 0, 0.95);
     box-shadow: 0 2px 20px rgba(251, 0, 0, 0.15);
-}
-@media (max-width: 991px) {
+  }
+  
+  /* Media Queries */
+  @media (max-width: 991px) {
     .cyber-nav .container {
-        padding: 0 1.5rem;
+      padding: 0 1.5rem;
     }
-    
+  
     .nav-logo {
-        height: 60px;
+      height: 60px;
     }
-    
+  
     .navbar-brand {
-        gap: 1rem;
+      gap: 1rem;
     }
-
+  
     .navbar-toggler {
-        border: 2px solid var(--cyber-red);
-        padding: 0.5rem 0.75rem;
+      border: 2px solid var(--cyber-red);
+      padding: 0.5rem 0.75rem;
     }
-
+  
     .navbar-toggler:focus {
-        box-shadow: 0 0 10px rgba(251, 0, 0, 0.5);
+      box-shadow: 0 0 10px rgba(251, 0, 0, 0.5);
     }
-
+  
     .navbar-collapse {
-        background: rgba(0, 0, 0, 0.95);
-        padding: 1rem;
-        border: 1px solid var(--cyber-red);
-        border-radius: 4px;
-        margin-top: 1rem;
-        transform: translateY(-10px);
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
-        backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.95);
+      padding: 1rem;
+      border: 1px solid var(--cyber-red);
+      border-radius: 4px;
+      margin-top: 1rem;
+      transform: translateY(-10px);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      backdrop-filter: blur(10px);
     }
-
+  
     .navbar-collapse.show {
-        transform: translateY(0);
-        opacity: 1;
+      transform: translateY(0);
+      opacity: 1;
     }
-
+  
     .navbar-nav {
-        gap: 0;
+      gap: 0;
     }
-
+  
     .nav-link {
-        padding: 0.8rem 1rem;
-        text-align: center;
-        border-bottom: 1px solid rgba(251, 0, 0, 0.2);
+      padding: 0.8rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(251, 0, 0, 0.2);
     }
-
+  
     .nav-link:last-child {
-        border-bottom: none;
+      border-bottom: none;
     }
-
+  
     .nav-link:hover {
-        background: rgba(251, 0, 0, 0.1);
+      background: rgba(251, 0, 0, 0.1);
     }
-
+  
     .cyber-register {
-        margin: 0.5rem 1rem;
+      margin: 0.5rem 1rem;
     }
-}
-
-
-@media (max-width: 576px) {
+  }
+  
+  @media (max-width: 576px) {
     .cyber-nav .container {
-        padding: 0 1rem;
+      padding: 0 1rem;
     }
-
+  
     .nav-logo {
-        height: 50px;
+      height: 50px;
     }
-
+  
     .cyber-brand {
-        font-size: 2rem;
+      font-size: 2rem;
     }
-}
-
+  }
 /* Button Styles */
 .cyber-btn {
     background: transparent;
