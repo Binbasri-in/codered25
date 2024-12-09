@@ -180,6 +180,18 @@
     max-height: 500px;
     padding: 1rem;
   }
+
+  @media (max-width: 768px) {
+    .ps-item.active .ps-answer {
+      max-height: 700px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .ps-item.active .ps-answer {
+      max-height: 800px;
+    }
+  }
   
  
   
