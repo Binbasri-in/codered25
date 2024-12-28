@@ -101,14 +101,42 @@
     <div class="content-header">
         <h2>Top 50 Teams</h2>
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search teams, members, or institutes...">
+            <input type="text" id="searchInput" placeholder="Search teams or institutes...">
+        </div>
+        <!-- Desktop Filter Buttons -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-ps="all">All</button>
+            <button class="filter-btn" data-ps="CR01">PS 01</button>
+            <button class="filter-btn" data-ps="CR02">PS 02</button>
+            <button class="filter-btn" data-ps="CR03">PS 03</button>
+            <button class="filter-btn" data-ps="CR04">PS 04</button>
+            <button class="filter-btn" data-ps="CR05">PS 05</button>
+            <button class="filter-btn" data-ps="CR06">PS 06</button>
+            <button class="filter-btn" data-ps="CR07">PS 07</button>
+            <button class="filter-btn" data-ps="CR08">PS 08</button>
+            <button class="filter-btn" data-ps="CR09">PS 09</button>
+            <button class="filter-btn" data-ps="CR10">PS 10</button>
+        </div>
+        <!-- Mobile Filter Dropdown -->
+        <div class="filter-dropdown">
+            <select id="filterSelect">
+                <option value="all">All</option>
+                <option value="CR01">CR01</option>
+                <option value="CR02">CR 02</option>
+                <option value="CR03">CR 03</option>
+                <option value="CR04">CR 04</option>
+                <option value="CR05">CR 05</option>
+                <option value="CR06">CR 06</option>
+                <option value="CR07">CR 07</option>
+                <option value="CR08">CR 08</option>
+                <option value="CR09">CR 09</option>
+                <option value="CR10">CR 10</option>
+            </select>
         </div>
     </div>
 
     <main>
-        <div id="teamContainer" class="team-grid">
-      
-        </div>
+        <div id="teamContainer" class="team-grid"></div>
     </main>
 
     <script>
@@ -116,51 +144,354 @@
             {
                 id: 1,
                 problemStatementId: "CR01",
-                teamName: "TEAM 01",
-                teamLeader: "lead1",
-                teamMembers: ["ABCD", "ABCD"],
-                institute: "BMSIT&m"
+                teamName: "Cyber Hawks",
+                teamLeader: "John Doe",
+                institute: "BMSIT&M"
             },
             {
                 id: 2,
-                problemStatementId: "CR01",
-                teamName: "TEAM 01",
-                teamLeader: "lead1",
-                teamMembers: ["ABCD", "ABCD"],
-                institute: "BMSIT&m"
+                problemStatementId: "CR02",
+                teamName: "Digital Nomads",
+                teamLeader: "Jane Smith",
+                institute: "RVCE"
             },
             {
                 id: 3,
-                problemStatementId: "CR01",
-                teamName: "TEAM 01",
-                teamLeader: "lead1",
-                teamMembers: ["ABCD", "ABCD"],
-                institute: "BMSIT&m"
+                problemStatementId: "CR03",
+                teamName: "Binary Bandits",
+                teamLeader: "Alex Chen",
+                institute: "MSRIT"
             },
             {
                 id: 4,
-                problemStatementId: "CR01",
-                teamName: "TEAM 01",
-                teamLeader: "lead1",
-                teamMembers: ["ABCD", "ABCD"],
-                institute: "BMSIT&m"
+                problemStatementId: "CR04",
+                teamName: "Code Crusaders",
+                teamLeader: "Sarah Wilson",
+                institute: "PESIT"
             },
             {
                 id: 5,
-                problemStatementId: "CR01",
-                teamName: "TEAM 01",
-                teamLeader: "lead1",
-                teamMembers: ["ABCD", "ABCD"],
-                institute: "BMSIT&m"
+                problemStatementId: "CR05",
+                teamName: "Tech Titans",
+                teamLeader: "Raj Kumar",
+                institute: "BMSCE"
             },
             {
                 id: 6,
+                problemStatementId: "CR06",
+                teamName: "Data Dragons",
+                teamLeader: "Maya Patel",
+                institute: "SJCE"
+            },
+            {
+                id: 7,
+                problemStatementId: "CR07",
+                teamName: "Algorithm Aces",
+                teamLeader: "Tom Brown",
+                institute: "NITK"
+            },
+            {
+                id: 8,
+                problemStatementId: "CR08",
+                teamName: "Quantum Questers",
+                teamLeader: "Lisa Zhang",
+                institute: "DSCE"
+            },
+            {
+                id: 9,
+                problemStatementId: "CR09",
+                teamName: "Cloud Champions",
+                teamLeader: "David Lee",
+                institute: "KMIT"
+            },
+            {
+                id: 10,
+                problemStatementId: "CR10",
+                teamName: "Network Ninjas",
+                teamLeader: "Priya Singh",
+                institute: "MVIT"
+            },
+            {
+                id: 11,
                 problemStatementId: "CR01",
-                teamName: "TEAM 01",
-                teamLeader: "lead1",
-                teamMembers: ["ABCD", "ABCD"],
-                institute: "BMSIT&m"
+                teamName: "System Sharks",
+                teamLeader: "Mike Johnson",
+                institute: "RVCE"
+            },
+            {
+                id: 12,
+                problemStatementId: "CR02",
+                teamName: "Debug Devils",
+                teamLeader: "Emma White",
+                institute: "BMSIT&M"
+            },
+            {
+                id: 13,
+                problemStatementId: "CR03",
+                teamName: "Pixel Pirates",
+                teamLeader: "Karthik Reddy",
+                institute: "RNSIT"
+            },
+            {
+                id: 14,
+                problemStatementId: "CR04",
+                teamName: "Logic Lords",
+                teamLeader: "Sophie Turner",
+                institute: "CMRIT"
+            },
+            {
+                id: 15,
+                problemStatementId: "CR05",
+                teamName: "Cyber Sentinels",
+                teamLeader: "Arun Sharma",
+                institute: "KSIT"
+            },
+            {
+                id: 16,
+                problemStatementId: "CR06",
+                teamName: "Web Warriors",
+                teamLeader: "Nina Rodriguez",
+                institute: "SJBIT"
+            },
+            {
+                id: 17,
+                problemStatementId: "CR07",
+                teamName: "Code Commandos",
+                teamLeader: "Rahul Kumar",
+                institute: "NITTE"
+            },
+            {
+                id: 18,
+                problemStatementId: "CR08",
+                teamName: "Data Defenders",
+                teamLeader: "Anjali Gupta",
+                institute: "DSATM"
+            },
+            {
+                id: 19,
+                problemStatementId: "CR09",
+                teamName: "Quantum Quarks",
+                teamLeader: "Rajesh Patel",
+                institute: "KLEIT"
+            },
+            {
+                id: 20,
+                problemStatementId: "CR10",
+                teamName: "Network Nomads",
+                teamLeader: "Sara Khan",
+                institute: "MVJCE"
+            },
+            {
+                id: 21,
+                problemStatementId: "CR01",
+                teamName: "System Soldiers",
+                teamLeader: "Rajesh Kumar",
+                institute: "BMSIT&M"
+            },
+            {
+               id: 22,
+                problemStatementId: "CR02",
+                teamName: "Debug Demons",
+                teamLeader: "Emma White",
+                institute: "BMSIT&M"
+            },
+            {
+                id: 23,
+                problemStatementId: "CR03",
+                teamName: "Hack Heroes",
+                teamLeader: "Arjun Nair",
+                institute: "PESIT"
+            },
+            {
+                id: 24,
+                problemStatementId: "CR04",
+                teamName: "Binary Brigade",
+                teamLeader: "Sneha Reddy",
+                institute: "RVCE"
+            },
+            {
+                id: 25,
+                problemStatementId: "CR05",
+                teamName: "Tech Troopers",
+                teamLeader: "Varun Mehta",
+                institute: "MSRIT"
+            },
+            {
+                id: 26,
+                problemStatementId: "CR06",
+                teamName: "Code Craftsmen",
+                teamLeader: "Aisha Khan",
+                institute: "BMSCE"
+            },
+            {
+                id: 27,
+                problemStatementId: "CR07",
+                teamName: "Digital Dynasty",
+                teamLeader: "Rohan Shah",
+                institute: "NITK"
+            },
+            {
+                id: 28,
+                problemStatementId: "CR08",
+                teamName: "Algo Avengers",
+                teamLeader: "Meera Iyer",
+                institute: "SJCE"
+            },
+            {
+                id: 29,
+                problemStatementId: "CR09",
+                teamName: "Cyber Sentinel",
+                teamLeader: "Vikram Singh",
+                institute: "DSCE"
+            },
+            {
+                id: 30,
+                problemStatementId: "CR10",
+                teamName: "Data Dynamos",
+                teamLeader: "Prisha Patel",
+                institute: "KMIT"
+            },
+            {
+                id: 31,
+                problemStatementId: "CR01",
+                teamName: "Script Spartans",
+                teamLeader: "Karan Malhotra",
+                institute: "MVIT"
+            },
+            {
+                id: 32,
+                problemStatementId: "CR02",
+                teamName: "Query Queens",
+                teamLeader: "Ananya Sharma",
+                institute: "RNSIT"
+            },
+            {
+                id: 33,
+                problemStatementId: "CR03",
+                teamName: "Pixel Pioneers",
+                teamLeader: "Dev Kapoor",
+                institute: "CMRIT"
+            },
+            {
+                id: 34,
+                problemStatementId: "CR04",
+                teamName: "Logic Legends",
+                teamLeader: "Zara Ahmed",
+                institute: "KSIT"
+            },
+            {
+                id: 35,
+                problemStatementId: "CR05",
+                teamName: "Bug Busters",
+                teamLeader: "Aditya Verma",
+                institute: "SJBIT"
+            },
+            {
+                id: 36,
+                problemStatementId: "CR06",
+                teamName: "Cloud Crusaders",
+                teamLeader: "Riya Desai",
+                institute: "NITTE"
+            },
+            {
+                id: 37,
+                problemStatementId: "CR07",
+                teamName: "Neural Knights",
+                teamLeader: "Kabir Sinha",
+                institute: "DSATM"
+            },
+            {
+                id: 38,
+                problemStatementId: "CR08",
+                teamName: "Quantum Quest",
+                teamLeader: "Ishaan Kumar",
+                institute: "KLEIT"
+            },
+            {
+                id: 39,
+                problemStatementId: "CR09",
+                teamName: "Byte Bandits",
+                teamLeader: "Neha Gupta",
+                institute: "MVJCE"
+            },
+            {
+                id: 40,
+                problemStatementId: "CR10",
+                teamName: "Tech Templars",
+                teamLeader: "Omar Sheikh",
+                institute: "BMSIT&M"
+            },
+            {
+                id: 41,
+                problemStatementId: "CR01",
+                teamName: "System Sages",
+                teamLeader: "Tara Menon",
+                institute: "RVCE"
+            },
+            {
+                id: 42,
+                problemStatementId: "CR02",
+                teamName: "Code Catalysts",
+                teamLeader: "Aryan Raj",
+                institute: "MSRIT"
+            },
+            {
+                id: 43,
+                problemStatementId: "CR03",
+                teamName: "Data Wizards",
+                teamLeader: "Nisha Kapoor",
+                institute: "PESIT"
+            },
+            {
+                id: 44,
+                problemStatementId: "CR04",
+                teamName: "Cyber Squadron",
+                teamLeader: "Akash Verma",
+                institute: "BMSCE"
+            },
+            {
+                id: 45,
+                problemStatementId: "CR05",
+                teamName: "Binary Battalion",
+                teamLeader: "Divya Krishnan",
+                institute: "SJCE"
+            },
+            {
+                id: 46,
+                problemStatementId: "CR06",
+                teamName: "Neural Ninjas",
+                teamLeader: "Sameer Khan",
+                institute: "NITK"
+            },
+            {
+                id: 47,
+                problemStatementId: "CR07",
+                teamName: "Quantum Raiders",
+                teamLeader: "Aditi Shah",
+                institute: "DSCE"
+            },
+            {
+                id: 48,
+                problemStatementId: "CR08",
+                teamName: "Code Commandos",
+                teamLeader: "Rohit Nair",
+                institute: "KMIT"
+            },
+            {
+                id: 49,
+                problemStatementId: "CR09",
+                teamName: "Tech Titans Elite",
+                teamLeader: "Meghna Singh",
+                institute: "MVIT"
+            },
+            {
+                id: 50,
+                problemStatementId: "CR10",
+                teamName: "Byte Brigade",
+                teamLeader: "Pranav Kumar",
+                institute: "RNSIT"
             }
+            
         ];
 
         function createTeamCard(team) {
@@ -168,14 +499,32 @@
             card.className = 'team-card';
             card.innerHTML = `
                 <div class="problem-id">${team.problemStatementId}</div>
-                <h2 class="glitch-effect">${team.teamName}</h2>
+                <h2>${team.teamName}</h2>
                 <div class="team-info">
-                    <p><strong>Leader:</strong> ${team.teamLeader}</p>
-                    <p><strong>Members:</strong> ${team.teamMembers.join(', ')}</p>
+                    <p><strong>Team Lead:</strong> ${team.teamLeader}</p>
+                    <p class="institute">${team.institute}</p>
                 </div>
-                <p class="institute">${team.institute}</p>
             `;
             return card;
+        }
+
+        function filterTeams() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const activeFilter = window.innerWidth <= 768 
+                ? document.getElementById('filterSelect').value
+                : document.querySelector('.filter-btn.active').dataset.ps;
+            
+            const filteredTeams = teams.filter(team => {
+                const matchesSearch = team.teamName.toLowerCase().includes(searchTerm) ||
+                    team.teamLeader.toLowerCase().includes(searchTerm) ||
+                    team.institute.toLowerCase().includes(searchTerm);
+                
+                const matchesFilter = activeFilter === 'all' || team.problemStatementId === activeFilter;
+                
+                return matchesSearch && matchesFilter;
+            });
+            
+            displayTeams(filteredTeams);
         }
 
         function displayTeams(teamsToDisplay) {
@@ -185,7 +534,6 @@
                 container.appendChild(createTeamCard(team));
             });
             
-           
             setTimeout(() => {
                 document.querySelectorAll('.team-card').forEach((card, index) => {
                     setTimeout(() => {
@@ -195,38 +543,21 @@
             }, 100);
         }
 
-        function searchTeams() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const filteredTeams = teams.filter(team => 
-                team.teamName.toLowerCase().includes(searchTerm) ||
-                team.teamLeader.toLowerCase().includes(searchTerm) ||
-                team.teamMembers.some(member => member.toLowerCase().includes(searchTerm)) ||
-                team.institute.toLowerCase().includes(searchTerm) ||
-                team.problemStatementId.toLowerCase().includes(searchTerm)
-            );
-            displayTeams(filteredTeams);
-        }
-
+        // Event Listeners
+        document.getElementById('searchInput').addEventListener('input', filterTeams);
         
-        displayTeams(teams);
-
-        document.getElementById('searchInput').addEventListener('input', searchTeams);
-
-  
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                filterTeams();
             });
-        }, {
-            threshold: 0.1
         });
 
-       
-        document.querySelectorAll('.team-card').forEach(card => {
-            observer.observe(card);
-        });
+        document.getElementById('filterSelect').addEventListener('change', filterTeams);
+
+        // Initial display
+        displayTeams(teams);
     </script>
 </body>
 </html>
